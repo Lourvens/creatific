@@ -1,0 +1,23 @@
+---
+import "./base.scss";
+
+import Head from "./head.astro";
+import Header from "@layouts/header/index.astro";
+import About from "@layouts/about/index.astro";
+import Service from "@layouts/service/index.astro";
+import Work from "@layouts/work/index.astro";
+---
+
+<html lang="en">
+	<Head />
+	<body>
+		<div class="main-container">
+			<Header />
+			<main>
+				<About />
+				<Service />
+				<Work />
+			</main>
+		</div>
+	</body>
+</html>

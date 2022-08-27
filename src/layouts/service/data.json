@@ -1,0 +1,37 @@
+[
+  {
+    "name": "photography",
+    "icon": "fa-solid fa-camera-retro",
+    "color": "#0f47e0"
+  },
+  {
+    "name": "branding",
+    "icon": "fa-solid fa-boxes-packing",
+    "color": "#9e0fe0"
+  },
+  {
+    "name": "development",
+    "icon": "fa-solid fa-arrow-up-right-dots",
+    "color": "#e00f90"
+  },
+  {
+    "name": "business plan",
+    "icon": "fa-solid fa-house-signal",
+    "color": "#e00f2b"
+  },
+  {
+    "name": "animation",
+    "icon": "fa-solid fa-arrows-rotate",
+    "color": "#faa331"
+  },
+  {
+    "name": "reasearch",
+    "icon": "fa-solid fa-magnifying-glass-chart",
+    "color": "#eef114"
+  },
+  {
+    "name": "UI/UX design",
+    "icon": "fa-solid fa-wand-magic-sparkles",
+    "color": "#0fe032"
+  }
+]

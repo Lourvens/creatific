@@ -1,0 +1,50 @@
+---
+import Button from "@components/button.astro";
+import Card from "./card.astro";
+import mockData from "./data.json";
+---
+
+<section class="about">
+  <div>
+    <h2 class="section--subtitle">services</h2>
+    <h1 class="section--title">our abilities for solutions</h1>
+    <p class="section--text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam tincidunt
+      quisque faucibus velit felis tincidunt. Turpis platea sed arcu aliquam
+      lorem in. In ut mattis faucibus purus donec libero bibendum ut id risus.
+    </p>
+    <Button>view all</Button>
+  </div>
+  <div class="card-group">
+    {
+      mockData.map(({ icon, name, color }) => (
+        <Card title={name} icon={icon} color={color} />
+      ))
+    }
+  </div>
+</section>
+<style is:inline>
+  .about {
+    margin: 8rem auto;
+    max-width: 1024px;
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .about .card-group {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 35%;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 350px;
+    align-items: center;
+    justify-content: center;
+  }
+  .about .card-group .card:nth-child(1) {
+    margin-top: 35px;
+  }
+</style>

@@ -1,0 +1,41 @@
+---
+const { title, icon, color } = Astro.props;
+
+export interface Props {
+  title: string;
+  icon: string;
+  color: string;
+}
+---
+
+<div class="card">
+  <i class={icon}></i>
+  <h1 class="card--title">{title}</h1>
+</div>
+
+<style lang="scss" define:vars={{ color }}>
+  .card {
+    width: 100px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-lg) var(--space-xs);
+    box-shadow: 3px 3px 54px 0px #5b5b5b14;
+    i {
+      font-size: 2rem;
+      color: #414141fa;
+      margin-bottom: var(--space-xs);
+      color: var(--color);
+      display: block;
+    }
+    &--title {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 110%;
+      text-align: center;
+      color: var(--color);
+    }
+  }
+</style>

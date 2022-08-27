@@ -1,0 +1,40 @@
+---
+import Navlink from "@components/Navlink.astro";
+---
+
+<nav class="nav-menu">
+  <h1>
+    <span>Creatific</span>
+  </h1>
+  <span class="spacer"></span>
+  <ul class="nav--list">
+    <li class="nav--item"><a href="#home" class="active">home</a></li>
+    <li class="nav--item"><a href="#about">about us</a></li>
+    <li class="nav--item"><a href="#work">works</a></li>
+    <li class="nav--item"><a href="#blog">blogs</a></li>
+    <li class="nav--item"><a href="#contact">contact us</a></li>
+  </ul>
+  <Navlink>let's talk</Navlink>
+</nav>
+
+<style>
+  h1 {
+    position: relative;
+    font-family: "prompt", sans-serif;
+    font-size: var(--text-lg);
+    font-weight: 400;
+  }
+  h1 span {
+    position: relative;
+  }
+  h1::before {
+    content: "";
+    top: 50%;
+    right: 0;
+    position: absolute;
+    width: 75%;
+    height: 15px;
+    background-color: var(--primary-color);
+    transform: translateY(25%);
+  }
+</style>

@@ -1,0 +1,48 @@
+<a class="active" href="">
+  <span>
+    <slot />
+    <i class="fa-solid fa-right-long"></i>
+  </span>
+</a>
+<style>
+  a {
+    text-transform: capitalize;
+    position: relative;
+    transition: all 0.2s ease;
+    padding: var(--space-xs) var(--space-sm);
+    display: inline-block;
+  }
+  a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 30px;
+    height: 25px;
+    border-radius: 99px;
+    background-color: var(--primary-color);
+    transform: translateY(-35%);
+    transition: all 0.3s ease;
+  }
+  a span {
+    position: relative;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+  }
+  a i {
+    position: relative;
+    font-size: 24px;
+    margin-left: 10px;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+  }
+  a:hover::before {
+    width: 100%;
+    background: var(--primary-color-dark);
+    transform: translateY(-50%) scaleY(1.3);
+  }
+  a:hover i {
+    transform: translateX(0px);
+  }
+</style>

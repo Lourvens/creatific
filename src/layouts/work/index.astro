@@ -1,0 +1,37 @@
+---
+import Navlink from "@components/Navlink.astro";
+import Slider from "./slider.astro";
+---
+
+<section class="container">
+  <div class="section--header">
+    <h3 class="section--subtitle">project</h3>
+    <div class="nav-menu">
+      <h1 class="section--title">latest work</h1>
+      <span class="spacer"></span>
+      <ul class="nav--list">
+        <li class="nav--item"><a href="" class="active">all</a></li>
+        <li class="nav--item"><a href="">branding</a></li>
+        <li class="nav--item"><a href="">ecommerce</a></li>
+        <li class="nav--item"><a href="">photography</a></li>
+        <li class="nav--item"><a href="">Ui/Ux Design</a></li>
+        <li class="nav--item"><a href="">animation</a></li>
+      </ul>
+      <Navlink>view all</Navlink>
+    </div>
+  </div>
+  <div class="section--content">
+    <Slider />
+  </div>
+</section>
+
+<style>
+  section {
+    background-color: #f7f9fd;
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-md);
+  }
+  .section--header {
+    margin-inline: var(--space-md);
+  }
+</style>

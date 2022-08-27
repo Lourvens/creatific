@@ -1,0 +1,37 @@
+---
+import brandImg from "@assets/about-brand.png";
+import Button from "@components/button.astro";
+---
+
+<section class="container">
+  <div class="left-side">
+    <img src={brandImg} />
+  </div>
+  <div class="right-side">
+    <h1 class="section--title">We create beautiful design for good business</h1>
+    <p class="section--text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam tincidunt
+      quisque faucibus velit felis tincidunt. Turpis platea sed arcu aliquam
+      lorem in. In ut mattis faucibus purus. Donec libero bibendum ut id risus,
+      bibendum faucibus velit mattis diam etiam.
+    </p>
+    <Button>read more</Button>
+  </div>
+</section>
+
+<style lang="scss">
+  section {
+    background-color: #fcfcfc;
+    overflow: hidden;
+    display: flex;
+    gap: var(--space-md);
+  }
+  .left-side img {
+    width: 380px;
+    transform: translateY(-25%);
+  }
+  .right-side {
+    padding: var(--space-md) var(--space-sm);
+    max-width: 650px;
+  }
+</style>

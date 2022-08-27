@@ -1,0 +1,123 @@
+/********************************************************************
+********************** variable and customization *******************
+*********************************************************************/
+:root {
+  --primary-color: #f3c522;
+  --primary-color-dark: #d3a80d;
+  --black-color: #111111;
+  --link-color: #807b7b;
+  --link-color-active: #111111;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 4rem;
+
+  --text-lg: 2.5rem;
+  --text-base: 1.18rem;
+  --text-bold: 1.25rem;
+  --text-light: 0.99rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--text-base);
+  font-family: "Jost", sans-serif;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover,a.active {
+  color: var(--link-color-active);
+}
+
+/********************************************************************
+************************ reusing style components *******************
+*********************************************************************/
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+.nav--list {
+  display: flex;
+  list-style: none;
+  gap: var(--space-md);
+  margin-right: var(--space-xl);
+}
+.nav--item a {
+  text-transform: capitalize;
+}
+
+.desc {
+  color: "#555555";
+  font-family: "";
+}
+
+.spacer {
+  flex-grow: 1;
+}
+.main-container {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+.container {
+  padding-right: var(--space-xl);
+  padding-left: var(--space-xl);
+  margin-inline: auto;
+}
+
+.section-- {
+  &title {
+    font-size: 28px;
+    line-height: 140%;
+    color: var(--black-color);
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family: 'Jost', sans-serif;
+    margin-bottom: var(--space-xs);
+  }
+  &text {
+    font-family: 'Inter', sans-serif;
+    line-height: 200%;
+    font-weight: 300;
+    color: #555555;
+    margin-bottom: var(--space-md);
+  }
+  &subtitle {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: 'Inter',serif;
+    padding-left: 35px;
+    margin-bottom: var(--space-sm);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      width: 25px;
+      height: 4px;
+      background-color: var(--primary-color-dark);
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.card {
+  &--title {
+    font-size: 18px;
+    color: var(--black-color);
+    text-transform: capitalize;
+    line-height: 23px;
+  }
+}
