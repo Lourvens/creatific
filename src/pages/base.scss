@@ -25,7 +25,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-size: var(--text-base);
   font-family: "Jost", sans-serif;
@@ -47,13 +49,13 @@ a:hover,a.active {
   display: flex;
   align-items: center;
 }
-.nav--list {
+.nav__list {
   display: flex;
   list-style: none;
   gap: var(--space-md);
   margin-right: var(--space-xl);
 }
-.nav--item a {
+.nav__item a {
   text-transform: capitalize;
 }
 
@@ -73,9 +75,18 @@ a:hover,a.active {
   padding-right: var(--space-xl);
   padding-left: var(--space-xl);
   margin-inline: auto;
+  &--small {
+    max-width: 1280px;
+  }
+  &--center {
+    text-align: center;
+  }
 }
-
-.section-- {
+.section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.section__ {
   &title {
     font-size: 28px;
     line-height: 140%;
@@ -91,6 +102,12 @@ a:hover,a.active {
     font-weight: 300;
     color: #555555;
     margin-bottom: var(--space-md);
+  }
+  &subtitle2 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Inter',sans-serif;
+    font-size: var(--font-bold);
   }
   &subtitle {
     position: relative;
@@ -114,10 +131,22 @@ a:hover,a.active {
 }
 
 .card {
-  &--title {
+  position: relative;
+  &__title {
     font-size: 18px;
     color: var(--black-color);
     text-transform: capitalize;
-    line-height: 23px;
+    letter-spacing: .2rem;
+  }
+  &__desc {
+    color: #d3d3d3;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  &__content {
+    line-height: 140%;
+    color: #555555;
   }
 }

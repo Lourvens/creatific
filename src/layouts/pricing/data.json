@@ -1,0 +1,20 @@
+[
+  {
+    "title": "personal",
+    "price": 19.99,
+    "desc": "1 design revision Power & Predictive Dialing Phone & email support",
+    "icon": "fa-gears"
+  },
+  {
+    "title": "small team",
+    "price": 39.99,
+    "desc": "1 design revision Power & Predictive Dialing Phone & email support",
+    "icon": "fa-rocket"
+  },
+  {
+    "title": "enterprise",
+    "price": 99.99,
+    "desc": "1 design revision Power & Predictive Dialing Phone & email support",
+    "icon": "fa-gem"
+  }
+]

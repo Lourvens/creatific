@@ -1,0 +1,34 @@
+---
+import Card from "./card.astro";
+import serviceData from "./data.json";
+---
+
+<section class="container section">
+  <div class="container--center">
+    <h3 class="section__subtitle2">pricing</h3>
+    <h1 class="section__title">our affordable pricing</h1>
+  </div>
+  <div class="card__group">
+    {
+      serviceData.map((data) => (
+        <Card
+          title={data.title}
+          price={data.price}
+          desc={data.desc}
+          icon={data.icon}
+          ghost={data.title != "small team"}
+        />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  section {
+    background-color: #fcfcfc;
+  }
+  .card__group {
+    display: flex;
+    gap: var(--space-md);
+  }
+</style>

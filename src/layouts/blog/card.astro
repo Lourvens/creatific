@@ -1,0 +1,53 @@
+---
+const { date, desc, img, service } = Astro.props;
+export interface Props {
+  desc: string;
+  img: any;
+  date: string;
+  service: string;
+}
+---
+
+<div class="card">
+  <div class="card__img">
+    <img src={img} alt="" />
+  </div>
+  <div class="card__content">
+    <h3 class="card__desc">{date} &middot; {service}</h3>
+    <h2 class="card__title">{desc}</h2>
+  </div>
+</div>
+
+<style lang="scss">
+  .card {
+    width: 350px;
+    overflow: hidden;
+    box-shadow: 8px 8px 14px #3b3b3b11;
+    cursor: pointer;
+    &:hover &__img img {
+      transform: scale(1.2);
+    }
+    &__img {
+      height: 200px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.3s ease-in-out;
+      }
+    }
+    &__content {
+      padding: var(--space-md) var(--space-sm);
+    }
+    &__desc {
+      color: var(--link-color);
+      font-size: var(--text-light);
+      font-weight: 400;
+    }
+    &__title {
+      font-weight: 500;
+      line-height: 1.25rem;
+    }
+  }
+</style>

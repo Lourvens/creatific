@@ -1,0 +1,122 @@
+---
+import Button from "@components/button.astro";
+---
+
+<footer class="section container" id="contact">
+  <div class="section__menu-container">
+    <ul class="section__menu">
+      <li class="menu__title">Explore</li>
+      <li class="menu__item">home</li>
+      <li class="menu__item">about us</li>
+      <li class="menu__item">works</li>
+      <li class="menu__item">blogs</li>
+      <li class="menu__item">contact us</li>
+    </ul>
+    <ul class="section__menu">
+      <li class="menu__title">Any queries</li>
+      <li class="menu__item menu--block">
+        <span class="menu__title">our location</span>
+        <span class="menu__desc">tribeca, new york, usa</span>
+      </li>
+      <li class="menu__item menu--block">
+        <span class="menu__title">call us</span>
+        <span class="menu__desc">(+880)244-35264</span>
+      </li>
+      <li class="menu__item menu--block">
+        <span class="menu__title">send us mail</span>
+        <span class="menu__desc">support@usr.com</span>
+      </li>
+    </ul>
+    <div class="section__contact-box">
+      <h1>
+        Got a project?
+        <span class="lined">
+          <span class="lined__content">Let’s talk.</span>
+        </span>
+      </h1>
+      <p>
+        Just feel free to contact if you wanna collaborate with us, or simply
+        have a conversation.
+      </p>
+      <Button>contact us</Button>
+    </div>
+  </div>
+  <div></div>
+</footer>
+<style lang="scss">
+  footer {
+    background-color: #f7f9fd;
+  }
+  .section {
+    &__menu-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 968px;
+      margin-inline: auto;
+    }
+    &__menu {
+      li {
+        list-style: none;
+        text-transform: capitalize;
+      }
+    }
+    &__contact-box {
+      max-width: 500px;
+      h1 {
+        font-weight: 300;
+        // font-family: "Inter";
+        // line-height: 200%;
+        font-size: var(--text-lg);
+        font-style: italic;
+      }
+      p {
+        line-height: 200%;
+        color: #555555;
+        margin-bottom: 1.75rem;
+      }
+    }
+  }
+  .menu {
+    &__title {
+      font-size: 22px;
+      font-weight: 500;
+    }
+    &__item {
+      font-size: 18px;
+      color: var(--link-color);
+      &.active,
+      &:hover {
+        color: var(--link-color-tint);
+      }
+    }
+
+    &--block {
+      display: block;
+      span {
+        display: block;
+        font-size: var(--text-light);
+      }
+      .menu__title {
+        color: #111;
+      }
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  .lined {
+    position: relative;
+    &__content {
+      position: relative;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 120%;
+      height: 20px;
+      transform: translateY(-25%);
+      background-color: var(--primary-color);
+    }
+  }
+</style>

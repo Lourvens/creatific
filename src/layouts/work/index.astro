@@ -3,24 +3,24 @@ import Navlink from "@components/Navlink.astro";
 import Slider from "./slider.astro";
 ---
 
-<section class="container">
-  <div class="section--header">
-    <h3 class="section--subtitle">project</h3>
+<section class="container" id="work">
+  <div class="section__header">
+    <h3 class="section__subtitle">project</h3>
     <div class="nav-menu">
-      <h1 class="section--title">latest work</h1>
+      <h1 class="section__title">latest work</h1>
       <span class="spacer"></span>
-      <ul class="nav--list">
-        <li class="nav--item"><a href="" class="active">all</a></li>
-        <li class="nav--item"><a href="">branding</a></li>
-        <li class="nav--item"><a href="">ecommerce</a></li>
-        <li class="nav--item"><a href="">photography</a></li>
-        <li class="nav--item"><a href="">Ui/Ux Design</a></li>
-        <li class="nav--item"><a href="">animation</a></li>
+      <ul class="nav__list">
+        <li class="nav__item"><a href="" class="active">all</a></li>
+        <li class="nav__item"><a href="">branding</a></li>
+        <li class="nav__item"><a href="">ecommerce</a></li>
+        <li class="nav__item"><a href="">photography</a></li>
+        <li class="nav__item"><a href="">Ui/Ux Design</a></li>
+        <li class="nav__item"><a href="">animation</a></li>
       </ul>
       <Navlink>view all</Navlink>
     </div>
   </div>
-  <div class="section--content">
+  <div class="section__content">
     <Slider />
   </div>
 </section>
@@ -31,7 +31,7 @@ import Slider from "./slider.astro";
     padding-top: var(--space-md);
     padding-bottom: var(--space-md);
   }
-  .section--header {
+  .section__header {
     margin-inline: var(--space-md);
   }
 </style>

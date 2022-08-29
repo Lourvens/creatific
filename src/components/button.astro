@@ -1,8 +1,16 @@
-<button>
+---
+const { rounded, ghost } = Astro.props;
+export interface Props {
+  rounded?: boolean;
+  ghost?: boolean;
+}
+---
+
+<button class:list={{ rounded, ghost }}>
   <slot />
 </button>
 
-<style>
+<style lang="scss">
   button {
     background-color: var(--black-color);
     border: none;
@@ -11,5 +19,28 @@
     color: #fff;
     text-transform: uppercase;
     font-weight: 500;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    &.rounded,
+    &.rounded:hover {
+      border-radius: var(--space-xs);
+    }
+
+    &:hover {
+      border-radius: 5px;
+    }
+    &:hover {
+    }
+    &.ghost {
+      background-color: transparent;
+      color: var(--link-color-tint);
+      border: 1px solid;
+      border-color: var(--link-color-tint);
+      &:hover,
+      &:active {
+        background-color: #111;
+        color: #fff;
+      }
+    }
   }
 </style>

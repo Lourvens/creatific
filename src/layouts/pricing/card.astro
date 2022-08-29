@@ -1,0 +1,81 @@
+---
+import Button from "@components/button.astro";
+
+const { title, price, desc, icon, ghost } = Astro.props;
+
+export interface Props {
+  title: string;
+  price: number;
+  desc: string;
+  icon: string;
+  ghost: boolean;
+}
+---
+
+<div class="card">
+  <h1 class="card__title">{title}</h1>
+  <div class="box-icon">
+    <i class:list={["fa-solid", icon]}></i>
+  </div>
+  <div class="card__price">
+    <span class="card__price-value">{price}</span>
+  </div>
+  <p class="card__content desc">
+    {desc}
+  </p>
+  <Button ghost={ghost} rounded>choose plan</Button>
+</div>
+<style lang="scss">
+  .card {
+    padding: var(--space-md) var(--space-sm);
+    width: 380px;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+    box-shadow: 3px 3px 54px #5b5b5b14;
+    &__title {
+      font-weight: 500;
+    }
+    &__content {
+      text-align: center;
+      margin-inline: var(--space-lg);
+      line-height: 200%;
+    }
+    &__price {
+      position: relative;
+      line-height: 0;
+      &-value {
+        font-size: var(--text-lg);
+        margin-inline: 10px 0;
+      }
+      &::before,
+      &::after {
+        position: absolute;
+        color: var(--link-color);
+        font-size: var(--text-light);
+      }
+      &::before {
+        content: "$";
+        top: -10px;
+      }
+      &::after {
+        content: "/mo";
+        bottom: 0;
+      }
+    }
+  }
+  .box-icon {
+    width: 120px;
+    height: 120px;
+    background-color: #fef6db;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: var(--primary-color);
+  }
+</style>

@@ -4,11 +4,11 @@ import Card from "./card.astro";
 import mockData from "./data.json";
 ---
 
-<section class="about">
+<section class="about container container--small">
   <div>
-    <h2 class="section--subtitle">services</h2>
-    <h1 class="section--title">our abilities for solutions</h1>
-    <p class="section--text">
+    <h2 class="section__subtitle">services</h2>
+    <h1 class="section__title">our abilities for solutions</h1>
+    <p class="section__text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam tincidunt
       quisque faucibus velit felis tincidunt. Turpis platea sed arcu aliquam
       lorem in. In ut mattis faucibus purus donec libero bibendum ut id risus.
@@ -25,8 +25,8 @@ import mockData from "./data.json";
 </section>
 <style is:inline>
   .about {
-    margin: 8rem auto;
-    max-width: 1024px;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
     display: flex;
     align-items: center;
     gap: var(--space-md);

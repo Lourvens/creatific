@@ -1,0 +1,23 @@
+---
+import Card from "./card.astro";
+import data from "./data.js";
+---
+
+<section class="section container" id="blog">
+  <div class="container--center">
+    <h3 class="section__subtitle2">blogs</h3>
+    <h1 class="section__title">latest blog post</h1>
+  </div>
+  <div class="card__group">
+    {data.map((value) => <Card {...value} />)}
+  </div>
+</section>
+
+<style>
+  .card__group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-lg);
+  }
+</style>
