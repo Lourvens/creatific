@@ -42,6 +42,7 @@ import usrImg from "@assets/usr1.png";
     margin: var(--space-lg) 0;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   .section-left {
     width: 560px;
@@ -93,6 +94,27 @@ import usrImg from "@assets/usr1.png";
         &.active {
           color: var(--link-color-tint);
         }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .card {
+      width: 350px;
+      padding: 0;
+      &__img {
+        position: relative;
+        transform: none;
+        float: left;
+        border-radius: 10px;
+      }
+      &__content {
+        padding-right: var(--space-xs);
+        padding-left: var(--space-lg);
+        padding-top: var(--space-xs);
+      }
+      &__action {
+        margin: var(--space-xs) var(--space-md);
       }
     }
   }

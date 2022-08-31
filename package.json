@@ -14,5 +14,7 @@
     "sass": "^1.54.5"
   },
   "dependencies": {
+    "gsap": "^3.11.0",
+    "scrollreveal": "^4.0.9"
   }
 }

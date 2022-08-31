@@ -4,7 +4,7 @@ import Button from "@components/button.astro";
 ---
 
 <section class="container" id="about">
-  <div class="left-side">
+  <div class="left-side fadeBottom">
     <img src={brandImg} />
   </div>
   <div class="right-side">
@@ -33,5 +33,20 @@ import Button from "@components/button.astro";
   .right-side {
     padding: var(--space-md) var(--space-sm);
     max-width: 650px;
+  }
+  @media screen and (max-width: 967px) {
+    section.container {
+      flex-direction: column;
+      gap: var(--space-sm);
+      padding-inline: 0;
+    }
+    .left-side {
+      height: 300px;
+      overflow: hidden;
+    }
+    .left-side img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 </style>

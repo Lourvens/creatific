@@ -48,7 +48,6 @@ import curvePattern from "@assets/soft-curve-pattern.png";
 <style lang="scss">
   section {
     position: relative;
-    gap: var(--space-xl);
     padding: var(--space-md);
   }
 
@@ -57,14 +56,14 @@ import curvePattern from "@assets/soft-curve-pattern.png";
     z-index: 10;
     display: flex;
     margin-top: 100px;
-    margin-left: var(--space-xl);
+    margin-left: var(--space-md);
     gap: var(--space-xl);
   }
 
   .section {
     &__content {
       display: flex;
-      width: 460px;
+      // width: 460px;
       flex-direction: column;
       gap: var(--space-sm);
       align-items: flex-start;
@@ -72,7 +71,7 @@ import curvePattern from "@assets/soft-curve-pattern.png";
     &__overview {
       display: grid;
       height: 400px;
-      width: 500px;
+      // width: 500px;
       grid-template-columns: repeat(5, minmax(0, 1fr));
       grid-template-rows: repeat(5, minmax(0, 1fr));
       gap: var(--space-md);
@@ -139,6 +138,27 @@ import curvePattern from "@assets/soft-curve-pattern.png";
         bottom: 0;
         right: 0;
         width: 130px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    section {
+      padding: var(--space-xs);
+    }
+    .container {
+      display: block;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    .section {
+      &__content {
+        margin-bottom: var(--space-xs);
+        width: auto;
+      }
+      &__overview {
+        height: 320px;
+        width: auto;
       }
     }
   }

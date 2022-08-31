@@ -41,15 +41,20 @@ import Button from "@components/button.astro";
       <Button>contact us</Button>
     </div>
   </div>
-  <div></div>
+  <div class="section__info">
+    &copy; 2022 creatific all right reserved. Developed by
+    <a href="http://lourvens.vercel.app">Luxamar Lourvens</a>.
+  </div>
 </footer>
 <style lang="scss">
-  footer {
+  footer.section {
     background-color: #f7f9fd;
+    padding-bottom: 1rem;
   }
   .section {
     &__menu-container {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       max-width: 968px;
       margin-inline: auto;
@@ -73,6 +78,13 @@ import Button from "@components/button.astro";
         line-height: 200%;
         color: #555555;
         margin-bottom: 1.75rem;
+      }
+    }
+    &__info {
+      text-align: center;
+      margin-top: var(--space-md);
+      a {
+        color: var(--primary-color-dark);
       }
     }
   }
@@ -116,7 +128,7 @@ import Button from "@components/button.astro";
       width: 120%;
       height: 20px;
       transform: translateY(-25%);
-      background-color: var(--primary-color);
+      background-color: var(--primary-color-dark);
     }
   }
 </style>

@@ -24,6 +24,25 @@ import Footer from "@layouts/footer/index.astro";
 				<Blog />
 			</main>
 			<Footer />
+			<script
+				src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"
+				preload
+			></script>
+			<script type="module">
+				// import ScrollReveal from "scrollreveal";
+				const sr = ScrollReveal({
+					origin: "top",
+					distance: "30px",
+					duration: 1500,
+				});
+
+				sr.reveal(
+					`nav.nav,.section__content,.section__overview,.left-side,.container, .card, footer div`,
+					{
+						interval: 200,
+					}
+				);
+			</script>
 		</div>
 	</body>
 </html>

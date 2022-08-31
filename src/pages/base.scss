@@ -41,23 +41,23 @@ a {
 a:hover,a.active {
   color: var(--link-color-active);
 }
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
 
+@media screen and (max-width: 1023px) {
+  :root {
+    --text-lg: 2rem;
+    --text-base: 1.1rem;
+    --text-bold: 1.2rem;
+    --text-light: 0.937rem;
+  }
+}
 /********************************************************************
 ************************ reusing style components *******************
 *********************************************************************/
-.nav-menu {
-  display: flex;
-  align-items: center;
-}
-.nav__list {
-  display: flex;
-  list-style: none;
-  gap: var(--space-md);
-  margin-right: var(--space-xl);
-}
-.nav__item a {
-  text-transform: capitalize;
-}
 
 .desc {
   color: "#555555";
@@ -148,5 +148,16 @@ a:hover,a.active {
   &__content {
     line-height: 140%;
     color: #555555;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+    padding-right: var(--space-md);
+    padding-left: var(--space-md);
+  }
+  .section {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
   }
 }
